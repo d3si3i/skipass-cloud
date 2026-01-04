@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Credits & Lizenzen — SkiPass Cloud</title>
+  <meta name="description" content="Dokumentation der Urheberrechtshinweise und Lizenzen." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 16l5-6 4 5 3-4 4 5" stroke="#06101f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.8 7.2h2.2v2.2h-2.2z" fill="#06101f"/>
+        </svg>
+      </div>
+      <div class="brand-title">
+        <strong>SkiPass Cloud</strong>
+        <span>Credits</span>
+      </div>
+    </div>
+
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="pricing.html">Preise</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn primary" href="cart.html">Warenkorb <span data-cart-count>0</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="section">
+    <div class="card pad">
+      <h1 style="margin-top:0">Urheberrechtshinweise &amp; Lizenzen</h1>
+      <p>
+        Diese Seite dokumentiert die verwendeten Medien.
+      </p>
+
+      <h2>Verwendete Medien</h2>
+      <div style="overflow:auto">
+        <table class="table" aria-label="Medienliste">
+          <thead>
+            <tr>
+              <th>Medium</th>
+              <th>Verwendung</th>
+              <th>Quelle</th>
+              <th>Lizenz</th>
+              <th>Urheber</th>
+              <th>Hinweis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SVG-Icons/Logo</td>
+              <td>Navigation, Features, Marken</td>
+              <td>Eigen erstellt</td>
+              <td>Eigene Rechte</td>
+              <td>AlpenTech Solutions</td>
+              <td>Keine externe Attribution nötig</td>
+            </tr>
+
+            <tr>
+              <td>Schriftarten</td>
+              <td>UI-Typografie</td>
+              <td>Systemfonts</td>
+              <td>OS-intern</td>
+              <td>—</td>
+              <td>Keine Einbindung externer Fonts</td>
+            </tr>
+
+            <tr>
+              <td>Texte</td>
+              <td>Inhalte der Website</td>
+              <td>Eigen verfasst</td>
+              <td>Eigene Rechte</td>
+              <td>—</td>
+              <td>Keine Übernahme fremder Texte</td>
+            </tr>
+
+            <tr>
+              <td>Fotografie (Hintergrundbild)</td>
+              <td>Rechter Hero-Bereich (Sidebox) – dekorativer Hintergrund</td>
+              <td>
+                <a href="https://www.pexels.com/de-de/foto/majestatische-schweizer-alpen-bei-sonnenaufgang-mit-wolkenmeer-35450236/" target="_blank" rel="noopener">
+                  Pexels (Foto)
+                </a>
+              </td>
+              <td>Pexels License (CC0-ähnlich)</td>
+              <td>Hugo Sykes</td>
+              <td>Lokal eingebunden als <code>images/snow-mountain.jpg</code></td>
+            </tr>
+
+            <tr>
+              <td>Video (Hintergrundvideo)</td>
+              <td>Hero-Bereich Startseite – Loop-Video im Hintergrund (dekorativ)</td>
+              <td>
+                <a href="https://www.pexels.com/video/stunning-aerial-view-of-snowy-alpine-mountains-35487263/" target="_blank" rel="noopener">
+                  Pexels (Video)
+                </a>
+              </td>
+              <td>Pexels License (CC0-ähnlich)</td>
+              <td>Oskar Gross</td>
+              <td>Lokal eingebunden als <code>videos/alps.mp4</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="margin-top:18px">Lizenzhinweis</h2>
+      <p class="hint">
+          Medien von Pexels werden unter der „Pexels License“ bereitgestellt (CC0-ähnlich).
+          Eine Namensnennung ist in der Regel nicht verpflichtend, wird hier jedoch freiwillig
+          und transparent angegeben.
+      </p>
+      <p class="hint">
+        Alle Medien wurden lokal eingebunden und nicht dynamisch nachgeladen.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>SkiPass Cloud</strong>
+      <p class="hint">Credits.</p>
+      <small>© <span id="y"></span> AlpenTech Solutions GmbH</small>
+    </div>
+    <div>
+      <h2 class="footer-title">Rechtliches</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
+        <a href="accessibility.html">Barrierefreiheit</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="license.html">Lizenz</a>
+        <a href="imprint.html">Impressum</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

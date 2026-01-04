@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout — SkiPass Cloud</title>
+  <meta name="description" content="Checkout für SkiPass Cloud." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 16l5-6 4 5 3-4 4 5" stroke="#06101f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.8 7.2h2.2v2.2h-2.2z" fill="#06101f"/>
+        </svg>
+      </div>
+      <div class="brand-title">
+        <strong>SkiPass Cloud</strong>
+        <span>Checkout</span>
+      </div>
+    </div>
+
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="pricing.html">Preise</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn primary" href="cart.html">Warenkorb <span data-cart-count>0</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="section">
+    <div class="card pad">
+      <h1 style="margin-top:0">Checkout</h1>
+      <p>Bitte gib deine Daten an. Diese Seite simuliert einen Kaufabschluss; keine echte Zahlung wird verarbeitet.</p>
+
+      <div class="grid-3" style="grid-template-columns:1.05fr .95fr .9fr">
+        <div class="card pad" style="box-shadow:none;background:rgba(255,255,255,.03)">
+          <h2 style="margin-top:0">Rechnungsdaten</h2>
+          <div id="checkoutErrors" tabindex="-1" aria-live="polite"></div>
+
+          <form id="checkoutForm" class="form" novalidate>
+            <div class="field">
+              <label for="company">Firma</label>
+              <input id="company"
+                name="company"
+                type="text"
+                placeholder="z. B. AlpenTech Solutions GmbH"
+                autocomplete="organization" required />
+            </div>
+
+            <div class="field">
+              <label for="fullname">Kontaktperson</label>
+              <input id="fullname" name="fullname" placeholder="Vor- und Nachname" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input   id="email"
+                name="email"
+                type="email"
+                placeholder="z. B. office@unternehmen.at"
+                autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="country">Land</label>
+              <select id="country" name="country" required>
+                <option value="">Bitte wählen…</option>
+                <option value="AT">Österreich</option>
+                <option value="DE">Deutschland</option>
+                <option value="CH">Schweiz</option>
+                <option value="IT">Italien</option>
+                <option value="FR">Frankreich</option>
+                <option value="other">Andere</option>
+              </select>
+            </div>
+
+            <fieldset class="notice" style="border:none">
+              <legend style="font-weight:800;color:var(--text)">Zahlungsmethode</legend>
+              <div class="hint">Es wird keine echte Zahlung verarbeitet.</div>
+              <div class="radio-group" style="margin-top:10px">
+              <label class="radio-option">
+                <input type="radio" name="payment" value="invoice" required>
+                <span>Rechnung</span>
+              </label>
+
+              <label class="radio-option">
+                <input type="radio" name="payment" value="card">
+                <span>Kreditkarte</span>
+              </label>
+
+              <label class="radio-option">
+                <input type="radio" name="payment" value="sepa">
+                <span>SEPA-Lastschrift</span>
+              </label>
+            </div>
+            </fieldset>
+
+            <div class="notice">
+              <strong style="color:var(--text)">Datenschutz-Hinweis:</strong>
+              <span class="hint">Infos zur Datenverarbeitung findest du in der <a href="privacy.html">Datenschutzerklärung</a>.</span>
+            </div>
+
+            <button id="placeOrder" class="btn primary" type="submit">Bestellung abschließen</button>
+          </form>
+        </div>
+
+        <div class="card pad" style="box-shadow:none;background:rgba(255,255,255,.03)">
+          <h2 style="margin-top:0">Zusammenfassung</h2>
+          <div id="checkoutEmptyWarn" class="error" role="alert" hidden>
+            Dein Warenkorb ist leer. <a href="pricing.html">Wähle zuerst einen Plan</a>.
+          </div>
+
+          <div id="checkoutSummary" class="form" aria-label="Bestellübersicht"></div>
+
+          <div class="notice" style="margin-top:12px">
+            <div class="hint">Summe</div>
+            <div style="font-family:var(--mono);color:var(--text);font-size:1.1rem" id="checkoutTotal">€ 0,00 / Monat</div>
+          </div>
+
+          <div class="demo" role="note" style="margin-top:12px">
+            <strong>Hinweis:</strong> Nach dem Klick wirst du auf eine Bestätigungsseite weitergeleitet.
+          </div>
+        </div>
+
+        <aside class="card pad" style="box-shadow:none;background:rgba(255,255,255,.03)">
+          <h2 style="margin-top:0">Was du kaufst</h2>
+          <p>Du erwirbst ein <strong>Nutzungsrecht</strong> an SkiPass Cloud (SaaS-Zugang) gemäß <a href="license.html">Lizenz</a>.</p>
+          <div class="notice">
+            <div class="hint">Inklusiv</div>
+            <ul class="ul">
+              <li>Account-Zugriff (Planabhängig)</li>
+              <li>Updates während Laufzeit</li>
+              <li>Support (Planabhängig)</li>
+            </ul>
+          </div>
+        
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>SkiPass Cloud</strong>
+      <p class="hint">Checkout ist gemockt. Keine echte Zahlung.</p>
+      <small>© <span id="y"></span> AlpenTech Solutions GmbH</small>
+    </div>
+    <div>
+      <h2 class="footer-title">Rechtliches</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
+        <a href="accessibility.html">Barrierefreiheit</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="license.html">Lizenz</a>
+        <a href="imprint.html">Impressum</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

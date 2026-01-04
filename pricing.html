@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preise — SkiPass Cloud</title>
+  <meta name="description" content="Pläne für SkiPass Cloud: Basic, Pro, Enterprise. In den Warenkorb legen." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 16l5-6 4 5 3-4 4 5" stroke="#06101f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.8 7.2h2.2v2.2h-2.2z" fill="#06101f"/>
+        </svg>
+      </div>
+      <div class="brand-title">
+        <strong>SkiPass Cloud</strong>
+        <span>Pläne & Preise</span>
+      </div>
+    </div>
+
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="pricing.html">Preise</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn primary" href="cart.html">Warenkorb <span data-cart-count>0</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="section">
+    <div class="card pad">
+      <h1 style="margin-top:0">Preise</h1>
+      <p>Wähle den passenden Plan. Zahlung & Bereitstellung sind in dieser Übung <strong>gemockt</strong>.</p>
+
+      <div class="pricing" aria-label="Preismodelle">
+        <article class="plan">
+          <h2 style="margin:0">Basic</h2>
+          <p class="hint">Für kleine Skigebiete & Pilotbetrieb.</p>
+          <div class="price"><strong>€ 249</strong><span>/ Monat</span></div>
+          <ul class="ul">
+            <li>Ticketshop-Widget (Standard)</li>
+            <li>QR-Ticket Versand</li>
+            <li>5 Nutzerkonten</li>
+            <li>Basis-Support (E-Mail)</li>
+          </ul>
+          <div class="toolbar">
+            <button class="btn primary" type="button" data-add-plan="basic">In den Warenkorb</button>
+          </div>
+        </article>
+
+        <article class="plan highlight">
+          <h2 style="margin:0">Pro</h2>
+          <p class="hint">Für wachsende Betriebe mit Reporting.</p>
+          <div class="price"><strong>€ 549</strong><span>/ Monat</span></div>
+          <ul class="ul">
+            <li>Alles aus Basic</li>
+            <li>Reporting-Dashboard</li>
+            <li>25 Nutzerkonten</li>
+            <li>Rollen: Admin/Verkauf/Kontrolle</li>
+          </ul>
+          <div class="toolbar">
+            <button class="btn primary" type="button" data-add-plan="pro">In den Warenkorb</button>
+          </div>
+        </article>
+
+        <article class="plan">
+          <h2 style="margin:0">Enterprise</h2>
+          <p class="hint">Für große Anlagen & Integrationen.</p>
+          <div class="price"><strong>€ 1.190</strong><span>/ Monat</span></div>
+          <ul class="ul">
+            <li>Alles aus Pro</li>
+            <li>SSO/Integrationen</li>
+            <li>100 Nutzerkonten</li>
+            <li>Prioritäts-Support</li>
+          </ul>
+          <div class="toolbar">
+            <button class="btn primary" type="button" data-add-plan="enterprise">In den Warenkorb</button>
+          </div>
+        </article>
+      </div>
+
+
+      <div aria-live="polite" class="hint" data-live style="min-height:1.2em;margin-top:10px"></div>
+      <div class="demo" role="note">
+        <strong>Hinweis:</strong> Diese Seite zeigt eine vereinfachte Demo eines SaaS-Preismodells.
+        <br> Rechtliche Informationen, Unternehmensdetails und Kontaktmöglichkeiten
+        gelten unabhängig vom gewählten Plan.
+      </div>
+
+            <div class="notice" style="margin-top:18px">
+        <p class="hint" style="margin:6px 0 10px">
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap">
+        <a class="btn small" href="license.html">Lizenz ansehen</a>
+        <a class="btn small" href="about.html">Über SkiPass Cloud</a>
+        <a class="btn small" href="contact.html">Kontakt</a>
+      </div>
+</div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>SkiPass Cloud</strong>
+      <p class="hint">Software-Webshop (statische Demo).</p>
+      <small>© <span id="y"></span> AlpenTech Solutions GmbH</small>
+    </div>
+    <div>
+      <h2 class="footer-title">Rechtliches</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
+        <a href="accessibility.html">Barrierefreiheit</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="license.html">Lizenz</a>
+        <a href="imprint.html">Impressum</a>
+        <a href="credits.html">Credits</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

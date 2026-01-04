@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt — SkiPass Cloud</title>
+  <meta name="description" content="Kontaktseite für SkiPass Cloud." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 16l5-6 4 5 3-4 4 5" stroke="#06101f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.8 7.2h2.2v2.2h-2.2z" fill="#06101f"/>
+        </svg>
+      </div>
+      <div class="brand-title">
+        <strong>SkiPass Cloud</strong>
+        <span>Kontakt</span>
+      </div>
+    </div>
+
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="pricing.html">Preise</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn primary" href="cart.html">Warenkorb <span data-cart-count>0</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="section">
+    <div class="card pad">
+      <h1 style="margin-top:0">Kontakt</h1>
+      <p>Für Fragen zu Plänen, Barrierefreiheit oder Datenschutz.</p>
+
+      <div class="grid-3" style="grid-template-columns:1fr 1fr 1fr">
+        <div class="notice">
+          <div class="hint">E-Mail</div>
+          <div style="color:var(--text)"><a href="mailto:support@alpentech.example">support@alpentech.example</a></div>
+        </div>
+        <div class="notice">
+          <div class="hint">Adresse</div>
+          <div style="color:var(--text)">Musterstraße 1, 1010 Wien</div>
+        </div>
+        <div class="notice">
+          <div class="hint">Öffnungszeiten</div>
+          <div style="color:var(--text)">Mo–Fr, 09:00–17:00</div>
+        </div>
+      </div>
+
+      <h2 style="margin-top:18px">Kontaktformular</h2>
+      <p class="hint">Dieses Formular sendet nichts ab; es simuliert nur die UI. Datenschutz siehe <a href="privacy.html">Datenschutzerklärung</a>.</p>
+
+      <form class="form" onsubmit="event.preventDefault(); document.getElementById('sent').hidden=false; this.reset();">
+        <div class="field">
+          <label for="cname">Name</label>
+          <input id="cname" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="cemail">E-Mail</label>
+          <input id="cemail" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="cmsg">Nachricht</label>
+          <textarea id="cmsg" required></textarea>
+        </div>
+        <button class="btn primary" type="submit">Nachricht senden</button>
+        <div id="sent" class="success" role="status" hidden>Deine Nachricht wurde versendet!</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>SkiPass Cloud</strong>
+      <p class="hint">Kontakt.</p>
+      <small>© <span id="y"></span> AlpenTech Solutions GmbH</small>
+    </div>
+    <div>
+      <h2 class="footer-title">Rechtliches</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
+        <a href="accessibility.html">Barrierefreiheit</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="license.html">Lizenz</a>
+        <a href="imprint.html">Impressum</a>
+        <a href="credits.html">Credits</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

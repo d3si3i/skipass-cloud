@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barrierefreiheitserklärung — SkiPass Cloud</title>
+  <meta name="description" content="Barrierefreiheitserklärung für den SkiPass Cloud Demo-Webshop." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 16l5-6 4 5 3-4 4 5" stroke="#06101f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.8 7.2h2.2v2.2h-2.2z" fill="#06101f"/>
+        </svg>
+      </div>
+      <div class="brand-title">
+        <strong>SkiPass Cloud</strong>
+        <span>Barrierefreiheit</span>
+      </div>
+    </div>
+
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="pricing.html">Preise</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn primary" href="cart.html">Warenkorb <span data-cart-count>0</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="section">
+    <div class="card pad">
+      <h1 style="margin-top:0">Barrierefreiheitserklärung</h1>
+
+      <p>
+        Diese Erklärung zur Barrierefreiheit gilt für den
+        <strong>statischen Demo-Webshop „SkiPass Cloud“</strong>.
+      </p>
+
+      <h2>Ziel der Barrierefreiheit</h2>
+      <p>
+        Wir sind bemüht, unseren Webshop gemäß den Anforderungen der
+        <strong>Web Content Accessibility Guidelines (WCAG) 2.2</strong>
+        auf Konformitätsstufe <strong>AA</strong> barrierefrei zugänglich zu gestalten.
+        Ziel ist es, die Nutzung für möglichst viele Menschen unabhängig von individuellen
+        Einschränkungen zu ermöglichen.
+      </p>
+
+      <h2>Stand der Vereinbarkeit mit den Anforderungen</h2>
+      <p>
+        Diese Website ist nach aktueller Einschätzung
+        <strong style="color:var(--text)">weitgehend barrierefrei</strong>
+        und entspricht den Anforderungen der <strong>WCAG 2.2 AA</strong>.
+      </p>
+
+      <h2>Bekannte Einschränkungen (demo-bedingt)</h2>
+      <ul class="ul">
+        <li>
+          Einige Texte und Tabellen sind bewusst kompakt gestaltet; bei
+          <strong>sehr starkem Zoom</strong> kann in Einzelfällen horizontales Scrollen erforderlich sein.
+        </li>
+        <li>
+          Das Cookie-Detailpanel ist technisch barrierefrei umgesetzt
+          (Tastaturbedienung, Fokusführung, ARIA-Attribute). Die Darstellung
+          kann jedoch <strong>je nach verwendetem Screenreader</strong> leicht variieren.
+        </li>
+      </ul>
+
+      <p class="hint">
+        Diese Einschränkungen betreffen ausschließlich Randfälle und stellen
+        keine grundlegenden Barrieren dar.
+      </p>
+
+      <h2>Erstellung dieser Erklärung</h2>
+      <ul class="ul">
+        <li><strong>Datum:</strong> 04.01.2026</li>
+        <li>
+          <strong>Methode:</strong> Selbstbewertung mittels
+          Tastaturnavigation, Fokusprüfung, Kontrastprüfung sowie
+          stichprobenartiger Nutzung automatisierter Tools
+          (AXE DevTools, WAVE).
+        </li>
+      </ul>
+
+      <h2>Feedback und Kontakt</h2>
+      <p>
+        Sollten dir Barrieren auffallen oder hast du Hinweise zur Verbesserung
+        der Barrierefreiheit, freuen wir uns über deine Rückmeldung.
+        Bitte nutze dafür unsere <a href="contact.html">Kontaktseite</a>.
+      </p>
+
+      <h2>Durchsetzungsverfahren</h2>
+      <p class="notice">
+        Da es sich bei dieser Website um eine <strong>Übungsabgabe und einen
+        statischen Demo-Webshop ohne produktiven Betrieb</strong> handelt,
+        ist kein formelles Durchsetzungs- oder Beschwerdeverfahren vorgesehen.
+        In einer realen Anwendung würde an dieser Stelle auf die zuständige
+        nationale Beschwerdestelle verwiesen.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>SkiPass Cloud</strong>
+      <p class="hint">Barrierefreiheitserklärung.</p>
+      <small>© <span id="y"></span> AlpenTech Solutions GmbH</small>
+    </div>
+    <div>
+      <h2 class="footer-title">Rechtliches</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
+        <a href="privacy.html">Datenschutz</a>
+        <a href="license.html">Lizenz</a>
+        <a href="imprint.html">Impressum</a>
+        <a href="credits.html">Credits</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
